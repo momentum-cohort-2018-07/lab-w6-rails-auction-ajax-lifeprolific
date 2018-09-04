@@ -5,6 +5,10 @@ class ItemsController < ApplicationController
     @items = Item.all
   end
 
+  def check_changes
+    @items = Item.all
+  end
+
   def show
     @bid = Bid.new(item: @item, amount: @item.next_bid_amount)
   end
